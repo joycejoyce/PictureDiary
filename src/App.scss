@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navBar {
+  height: 85px;
+  background: #FFDD9A;
+  .contents {
+    width: 80%;
+    height: 100%;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: center;
+    .menu,.logo,.search {
+      cursor: pointer;
+    }
+    .menu {
+      width: 20px;
+      grid-column-start: 1;
+    }
+    .logo {
+      width: 80px;
+      grid-column: 2 / span 2;
+    }
+    .search {
+      width: 20px;
+      grid-column-start: 8;
+      justify-self: flex-end;
+    }
+  }
+}
