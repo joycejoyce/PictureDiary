@@ -31,3 +31,67 @@
     }
   }
 }
+
+.articles {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 1em;
+  margin: 2em auto 0 auto;
+  color: #555555;
+  .line {
+    border-top: 1.5px solid #E5E5E5;
+    height: 1px;
+    margin-top: 1em;
+  }
+  .title,.text {
+    font-family: 'Noto Serif TC', serif;
+  }
+  .title {
+    font-weight: 600;
+    font-size: 2em;
+    letter-spacing: 0.1em;
+    margin-bottom: .2em;
+    cursor: pointer;
+    &:hover {
+      color: #7E7D7D;
+    }
+  }
+  .text {
+    font-weight: 300;
+    font-size: 1.125em;
+    letter-spacing: 0.08em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    white-space: pre-wrap
+  }
+  .date {
+    font-family: 'Crimson Text', serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 1em;
+    letter-spacing: 0.08em;
+  }
+  .singleImg {
+    margin: 0 auto;
+    width: 330px;
+    img {
+      width: 100%;
+    }
+  }
+  .multiImg {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 300px;
+    grid-column-gap: 6px;
+    grid-row-gap: 11px;
+    img {
+      width: 150px;
+    }
+  }
+  img {
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.25);
+  }
+}

@@ -7,11 +7,17 @@ import {
   Link
 } from "react-router-dom";
 import NavBar from "./components/NavBar.js";
+import Home from "./components/Home.js";
 
 function App() {
   return (
     <Router>
       <NavBar />
+      <Switch>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
     </Router>
   );
 }
