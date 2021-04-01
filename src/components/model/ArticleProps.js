@@ -1,6 +1,12 @@
-//get = () => {
-function get() {
+function getById(id) {
+    const articles = getAll();
+    const [ theArticle ] = articles.filter(article => article.id === id);
+    return theArticle;
+}
+
+function getAll() {
     const article1 = {
+        id: "0001",
         title: "書法之美",
         date: "2021.03.27",
         text: `昨晚深夜，聆聽【殤】這首憂傷的曲子，同時也認真練習書法。
@@ -15,6 +21,7 @@ function get() {
         imgUrls: ["https://drive.google.com/uc?export=view&id=1pBaGil2EmOi2SzZ3PX8JC5AkN_R1qye7"]
     };
     const article2 = {
+        id: "0002",
         title: "美麗的水里故鄉",
         date: "2021.02.17",
         text: `大年初三，再次回到水里故鄉。
@@ -36,8 +43,12 @@ function get() {
             "https://drive.google.com/uc?export=view&id=1hV-BmYIdn5RML5uSEHaVGO0bZbSndjXk"
         ]
     }
+    const article3 = {
+        ...article1,
+        id: "0003"
+    };
 
-    return [article1, article2, article1];
+    return [article1, article2, article3];
 }
 
-export default get;
+export { getAll, getById };
