@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { getAll } from "./model/ArticleProps.js";
 import Article from "./Article.js";
+import ReadMoreBtn from "./ReadMoreBtn.js";
 
 class Articles extends Component {
     render() {
@@ -10,7 +11,11 @@ class Articles extends Component {
             <div className="articles">
                 {
                     articleProps.map((prop,idx) => (
-                        <Article key={idx} props={prop} target="_blank" />
+                        <>
+                            <Article key={idx} props={prop} target="_blank" />                
+                            <ReadMoreBtn />
+                            <div className="line"></div>
+                        </>
                     ))
                 }
             </div>

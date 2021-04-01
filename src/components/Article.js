@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 class Article extends Component {
     render() {
         const { props, target } = this.props;
-        console.log("target", target);
         const { id, title, date, text, imgUrls } = props;
         const imgType = imgUrls.length > 1 ? "multiImg" : "singleImg";
         return (
@@ -25,7 +24,6 @@ class Article extends Component {
                         ))
                     }
                 </div>
-                <div className="line"></div>
             </div>
         );
     }

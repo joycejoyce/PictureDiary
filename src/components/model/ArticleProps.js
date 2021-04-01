@@ -48,7 +48,7 @@ function getAll() {
         id: "0003"
     };
 
-    return [article1, article2, article3];
+    return [article2, article1, article3];
 }
 
 export { getAll, getById };
