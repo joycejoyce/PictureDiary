@@ -4,7 +4,30 @@ function getById(id) {
     return theArticle;
 }
 
-function getAll() {
+function getByHttpReq() {
+    let xmlHttp = new XMLHttpRequest();
+    const url = "https://picturediary-backend.herokuapp.com/getAllJson";
+    xmlHttp.open("GET", url, false); // false for synchronous request
+    xmlHttp.send(null);
+    console.log("sent done!");
+
+    const responseStr = xmlHttp.responseText;
+    //console.log("responseStr", responseStr);
+
+    const responseAry = JSON.parse(responseStr);
+    //console.log("len", responseAry.length);
+
+    responseAry.forEach((jsonObj, idx) => {
+        jsonObj["id"] = idx.toString();
+        //console.log("jsonObj", jsonObj);
+    });
+
+    console.log("result", JSON.stringify(responseAry));
+
+    return responseAry;
+}
+
+function getFakeArticles() {
     const article1 = {
         id: "0001",
         title: "書法之美",
@@ -49,6 +72,12 @@ function getAll() {
     };
 
     return [article2, article1, article3];
+}
+
+function getAll() {
+    const articles = getByHttpReq();
+
+    return articles;
 }
 
 export { getAll, getById };
