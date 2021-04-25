@@ -64,7 +64,10 @@ function getByMocking() {
         imgUrls: ["https://drive.google.com/uc?export=view&id=1vn3B_0jNAsAHtiGHRgaJBYKA_1tB6OzG",
                     "https://drive.google.com/uc?export=view&id=1ncVtQhbadmTLXn_p4Q9tR_5tFRT-aJIn",
                     "https://drive.google.com/uc?export=view&id=1vUZxTVI6JeRRMpCChandCXjq-ofXWbke",
-                    "https://drive.google.com/uc?export=view&id=1am1DfRzXvk4SMOWVpN4Cl9SPlCYo3jV1"]
+                    "https://drive.google.com/uc?export=view&id=1am1DfRzXvk4SMOWVpN4Cl9SPlCYo3jV1",
+                    "https://drive.google.com/uc?export=view&id=1W0kuI_FuLSBejpfesO4TKeBz7FF7Zgm8",
+                    "https://drive.google.com/uc?export=view&id=1azR-L_EtiQNcVI5zZvWzMV7ZOBykMOwE",
+                    "https://drive.google.com/uc?export=view&id=14A3h7lOazx65C6JBpYF-OevNBdqVWZ8v"]
     }
     const article3 = {
         id: "0003",
@@ -78,8 +81,8 @@ function getByMocking() {
 }
 
 function getAll() {
-    //const articles = getByHttpReq();
-    const articles = getByMocking();
+    const articles = getByHttpReq();
+    //const articles = getByMocking();
 
     return articles;
 }
