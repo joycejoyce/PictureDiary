@@ -7,8 +7,8 @@ function FullArticle() {
     const articleProps = getById(id);
     console.log("articleProps", articleProps);
     return (
-        <div className="articles">
-            <Article props={articleProps} target="" />
+        <div className="fullArticle">
+            <Article props={articleProps} parent="FullArticle" target="" />
         </div>
     );
 }

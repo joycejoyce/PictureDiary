@@ -12,7 +12,7 @@ class Articles extends Component {
                 {
                     articleProps.map((prop,idx) => (
                         <>
-                            <Article key={idx} props={prop} target="_blank" />                
+                            <Article key={idx} props={prop} parent="Articles" target="_blank" />                
                             <ReadMoreBtn />
                             <div className="line"></div>
                         </>
